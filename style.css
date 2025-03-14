@@ -137,8 +137,11 @@ main {
 .hero-text_menu {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); 
+    flex-wrap: wrap;
     gap: 2rem;
     padding: 1.25rem 0 3rem 0;
+    border: 1px solid red solid;
+
 }
 
 .text-group span {
@@ -238,7 +241,6 @@ main {
 .item-menu{
     text-align: center;
 }
-
 .item-menu span a {
     font-family: 'Manrope', sans-serif;
     font-weight: 400;
@@ -445,6 +447,10 @@ footer span {
         margin: auto;
         padding-top: 30px;
     }
+    .hero-text_menu {
+        grid-template-columns: 1fr;
+    }
+
 }
 
 @media (max-width: 480px) {
