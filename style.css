@@ -26,13 +26,13 @@ main {
 
 
 .container {
-    width: 90%;
+    width: 95%;
     margin: 0 auto;
     max-width: 1400px; 
 }
 
 .container2 {
-    width: 85%;
+    width: 90%;
     margin: 0 auto;
     max-width: 1200px;
 }
@@ -162,12 +162,11 @@ main {
 
 .hero-text_menu {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); 
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
     flex-wrap: wrap;
     gap: 2rem;
     padding: 1.25rem 0 3rem 0;
     border: 1px solid red solid;
-
 }
 
 .text-group span {
@@ -262,11 +261,8 @@ main {
 /*! Page Four */
 
 .page-four_menu-grid {
-    justify-content: center;
-    padding-bottom: 2rem;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
-    gap: 1rem;
 }
 
 .item-menu{
@@ -461,11 +457,11 @@ footer span {
 @media (max-width: 992px) {
     .navbar {
         flex-direction: column;
-        gap: 1rem;
+        gap: 1.5rem;
+        padding: 1rem 0;
     }
     .nav-menu ul {
-        flex-direction: row;
-        gap: 3rem;
+        gap: 1.5rem;
     }
     .hero h2 {
         font-size: clamp(1.2rem, 4vw, 2rem);
@@ -490,9 +486,11 @@ footer span {
         padding-top: 30px;
     }
     .hero-text_menu {
-        grid-template-columns: 1fr;
+        gap: 1.5rem;
     }
-
+    .page-four_menu-grid {
+        grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+    }
 }
 
 @media (max-width: 480px) {
@@ -523,4 +521,9 @@ footer span {
 
 .text-group:hover {
     transform: translateY(-5px);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
