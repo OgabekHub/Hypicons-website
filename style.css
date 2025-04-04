@@ -48,6 +48,11 @@ main {
 .logo img {
     width: 10rem;
     height: auto;
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.1) rotate(5deg);
 }
 
 .nav-menu ul {
@@ -61,6 +66,27 @@ main {
     font-family: 'IBM Plex Mono', monospace;
     font-size: clamp(0.8rem, 2vw, 1rem);
     font-weight: 400;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-menu ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background: linear-gradient(45deg, #800080, #4B0082);
+    transition: width 0.3s ease;
+}
+
+.nav-menu ul li a:hover {
+    color: #9400FF;
+}
+
+.nav-menu ul li a:hover::after {
+    width: 100%;
 }
 
 .btn button {
@@ -226,6 +252,11 @@ main {
     width: 100%;
     max-width: 90%;
     height: auto;
+    transition: transform 0.3s ease;
+}
+
+.page-phone_icons img:hover {
+    transform: scale(1.05);
 }
 
 /*! Page Four */
@@ -258,9 +289,13 @@ main {
     font-weight: 400;
     font-size: clamp(0.7rem, 2vw, 0.875rem);
     color: #ffffff;
+    transition: all 0.3s ease;
 }
 
-
+.item-menu ul li a:hover {
+    color: #9400FF;
+    transform: translateX(10px);
+}
 
 .icon-request-hub {
     display: grid;
@@ -280,6 +315,7 @@ main {
     width: 100%;
     max-width: 65%;
     height: auto;
+    animation: float 3s ease-in-out infinite;
 }
 
 .right-section h2 {
@@ -416,7 +452,11 @@ footer span {
     line-height: 1.875rem;
 }
 
-
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
 
 @media (max-width: 992px) {
     .navbar {
@@ -475,4 +515,12 @@ footer span {
        flex-direction: column;
        align-items: center;
     }
+}
+
+.text-group {
+    transition: transform 0.3s ease;
+}
+
+.text-group:hover {
+    transform: translateY(-5px);
 }
